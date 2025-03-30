@@ -15,14 +15,14 @@ app.post('/sign-in', async (req, res) => {
     const { email, password, username } = req.body;
 
     console.log(req.body)
-    
+
     if (!email) return res.status(400).json({ error: 'No Email.' });
     if (!password) return res.status(400).json({ error: 'No Password.' });
     if (!username) return res.status(400).json({ error: 'No Username.' });
 
     const { data, error } = await supabase
         .from('users')
-        .insert([[{ email, password, username }]]);
+        .insert([{ email, password, username }]);
     
     if (error) return res.status(500).json({ error: error.message });
 
