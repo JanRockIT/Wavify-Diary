@@ -20,7 +20,7 @@ app.post('/sign-in', async (req, res) => {
 
     const { data, error } = await supabase
         .from('users')
-        .insert([{ email, password, username }]);
+        .insert([[{ email, password, username }]]);
     
     if (error) return res.status(500).json({ error: error.message });
 
