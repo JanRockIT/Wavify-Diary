@@ -2,7 +2,7 @@
   "name": "wavify-diary",
   "version": "1.0.0",
   "description": "A - W o n d e r f u l - L i f e.",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node api/app.js"
